@@ -1,0 +1,18 @@
+{% extends 'todos/base.html' %}
+
+{% block content %}
+    <!-- 'title' is passed from the view: "Add Todo" or "Edit Todo" -->
+    <h1>{{ title }}</h1>
+
+    <form method="post">
+        <!-- Required by Django to protect against Cross-Site Request Forgery -->
+        {% csrf_token %}
+        <!-- Renders each form field wrapped in a <p> tag, with labels -->
+        {{ form.as_p }}
+        <button type="submit" class="btn">Save</button>
+        <a href="{% url 'todo_list' %}" style="margin-left:10px;">Cancel</a>
+    </form>
+{% endblock %}
+
+
+

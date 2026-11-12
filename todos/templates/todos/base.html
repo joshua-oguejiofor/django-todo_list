@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <style>
+        /* Basic page styling kept in one place since this is a small project */
+        body { font-family: Arial, sans-serif; background: #f4f5f7; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 40px auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+        h1 { margin-top: 0; }
+        .todo-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee; }
+        .todo-item:last-child { border-bottom: none; }
+        .todo-title.completed { text-decoration: line-through; color: #888; }
+        .actions a { margin-left: 10px; font-size: 0.9em; text-decoration: none; }
+        .btn { display: inline-block; padding: 8px 14px; background: #2563eb; color: #fff; border-radius: 4px; text-decoration: none; border: none; cursor: pointer; font-size: 0.95em; }
+        .btn-danger { background: #dc2626; }
+        .form-input { width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .messages { list-style: none; padding: 0; }
+        .messages li { background: #d1fae5; padding: 8px; border-radius: 4px; margin-bottom: 10px; }
+        .empty-state { color: #888; text-align: center; padding: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+        <!-- block/endblock lets child templates inject their own content here -->
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
